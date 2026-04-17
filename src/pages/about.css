@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* About page styles */
+.about-page{
+	width:100vw;
+	max-width:none;
+	margin:12px -50vw 48px;
+	padding:0;
+	position:relative;
+	left:50%;
+	right:50%;
+	background:#ffffff;
+	border:1px solid rgba(8,16,41,0.05);
+	font-family:'Poppins', sans-serif;
+}
+
+.about-hero{
+	margin:0;
+	background:linear-gradient(180deg, #0f4fcd 0%, #0a3db5 100%);
+	color:#fff;
+	border-radius:20px 20px 0 0; /* remove bottom corner radius */
+	overflow:hidden;
+}
+
+.about-hero-inner{
+	display:grid;
+	grid-template-columns:minmax(0, 1fr) 560px;
+	gap:48px;
+	align-items:center;
+	min-height:490px;
+	padding:82px 88px;
+	max-width:none;
+	margin:0 auto;
+}
+
+.about-hero-copy{padding-left:44px}
+
+.about-hero-copy h1{
+	font-size:64px;
+	line-height:1.1;
+	margin:0 0 32px; /* increased spacing below About Us */
+	font-weight:700;
+	color:#fff;
+}
+
+.about-hero-copy h2{
+	font-size:36px;
+	line-height:1.35;
+	margin:0 0 40px; /* increased spacing below subtitle */
+	font-weight:700;
+	color:rgba(255,255,255,0.94);
+}
+
+.about-hero-copy p{
+	margin:0 0 8px;
+	max-width:640px;
+	font-size:18px;
+	line-height:1.5;
+	color:rgba(255,255,255,0.92);
+}
+
+/* extra space for the first paragraph after the subtitle */
+.about-hero-copy p:first-of-type{margin-bottom:40px}
+
+.about-hero-image-wrap{
+	display:flex;
+	justify-content:center;
+}
+
+.about-hero-image{
+	width:100%;
+	max-width:820px; /* increased width for hero image */
+	height:auto; /* allow natural height */
+	object-fit:cover;
+	border-radius:4px; /* further reduced radius */
+	box-shadow:0 12px 28px rgba(2,9,34,0.34);
+}
+
+.about-story,
+.about-mission,
+.about-vision{
+	padding:52px 88px 20px;
+}
+
+.about-story{
+	margin-top:80px;
+}
+
+.about-mission,
+.about-vision{
+	margin-top:80px;
+}
+
+.about-vision{
+	padding-bottom:110px;
+}
+
+.about-story-inner,
+.about-mission-inner,
+.about-vision-inner{
+	display:grid;
+	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+	gap:48px;
+	align-items:center;
+	max-width:none;
+	margin:0 auto;
+}
+
+.about-mission-inner{
+	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+	gap:48px;
+	max-width:none;
+	margin:0 auto;
+}
+.about-vision-inner{
+	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+	gap:144px;
+}
+
+.about-story-inner{
+	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+	gap:144px;
+}
+
+.about-story-media,
+.about-mission-media,
+.about-vision-media{
+	position:relative;
+	display:flex;
+	justify-content:flex-start;
+	align-items:flex-end;
+}
+
+.about-story-media{justify-content:flex-end;align-items:center;min-width:0;max-width:none;justify-self:stretch}
+.about-vision-media{justify-content:flex-end;align-items:center;min-width:0;max-width:none;justify-self:stretch}
+
+.about-mission-media{
+	width:100%;
+	max-width:none;
+	min-height:auto;
+	justify-self:stretch;
+	justify-content:flex-start;
+	align-items:center;
+	padding-left:24px;
+}
+
+.about-story-media img,
+.about-mission-media img,
+.about-vision-media img{
+	border-radius:18px;
+	box-shadow:0 10px 26px rgba(8,16,41,0.14);
+}
+
+.story-main{width:96%;max-width:520px;border-radius:22px;box-shadow:0 8px 18px rgba(8,16,41,0.12)}
+.story-overlay{
+	position:absolute;
+	/* moved further right per request */
+	right:-18%;
+	bottom:14%;
+	/* increase overlay size for a stronger visual */
+	width:50%;
+	max-width:240px;
+	border-radius:18px;
+	transform:none;
+	box-shadow:0 8px 18px rgba(8,16,41,0.12);
+	background-color:transparent;
+	border:none;
+}
+
+.about-story-copy,
+.about-vision-copy,
+.about-mission-card{
+	max-width:none;
+}
+
+.about-mission-card{max-width:none;width:100%}
+
+.about-story-copy h3,
+.about-vision-copy h3,
+.about-mission-card h3{
+	margin:0 0 14px;
+	font-size:32px;
+	line-height:1.04;
+	font-weight:700;
+	text-align:center;
+	color:#101827;
+}
+
+.about-story-copy h3{
+	font-size:30px;
+	margin-bottom:12px;
+}
+
+.about-story-copy p,
+.about-vision-copy p,
+.about-mission-card p{
+	margin:0 0 10px;
+	font-size:12px;
+	line-height:1.45;
+	font-weight:500;
+	color:#262f40;
+	text-align:center;
+}
+
+.about-story-copy p{
+	font-size:14px;
+	line-height:1.6;
+	margin-bottom:12px;
+}
+
+.about-mission-card{
+	padding:42px 40px 38px;
+	min-height:0;
+	background:linear-gradient(180deg, #1a4dbe, #0d3ba7);
+	border-radius:22px;
+	box-shadow:0 10px 22px rgba(8,16,41,0.16);
+}
+
+.about-mission-card h3{font-size:62px;line-height:1.02;margin-bottom:20px}
+
+.about-mission-card p{font-size:18px;line-height:1.5;margin-bottom:14px}
+
+.about-story-copy,
+.about-vision-copy{
+	justify-self:center;
+}
+
+.about-story-copy{
+	justify-self:start;
+	width:100%;
+	max-width:none;
+	margin-left:0;
+	min-height:auto;
+	padding-top:0;
+	padding-bottom:0;
+	min-width:0;
+}
+
+.about-vision-copy{
+	justify-self:start;
+	width:100%;
+	max-width:none;
+	margin-left:0;
+}
+
+.about-vision-copy h3{
+	font-size:38px;
+	margin-bottom:14px;
+}
+
+.about-vision-copy p{
+	font-size:14px;
+	line-height:1.6;
+	margin-bottom:12px;
+}
+
+.about-mission-card{
+	justify-self:stretch;
+}
+
+.about-mission-card h3,
+.about-mission-card p{color:#fff}
+
+.mission-main{
+	width:100%;
+	max-width:520px;
+	border-radius:22px;
+	box-shadow:0 8px 18px rgba(8,16,41,0.12);
+}
+.mission-overlay{
+	position:absolute;
+	right:7%;
+	bottom:16%;
+	width:38%;
+	max-width:180px;
+	border-radius:18px;
+	transform:none;
+	box-shadow:0 8px 18px rgba(8,16,41,0.12);
+}
+
+.vision-main{width:96%;max-width:520px;border-radius:22px;box-shadow:0 8px 18px rgba(8,16,41,0.12)}
+.vision-overlay{
+	position:absolute;
+	right:6%;
+	bottom:14%;
+	width:32%;
+	max-width:140px;
+	border-radius:18px;
+	transform:none;
+	box-shadow:0 8px 18px rgba(8,16,41,0.12);
+}
+
+@media (max-width: 960px){
+	.about-page{margin:10px auto 36px}
+	.about-hero-inner{grid-template-columns:1fr;gap:16px;min-height:auto;padding:20px}
+	.about-hero-copy{padding-left:0}
+	.about-hero-image{height:auto}
+	.about-hero-copy h1{font-size:44px}
+	.about-hero-copy h2{font-size:20px}
+	.about-hero-copy p{font-size:14px}
+	.about-story,
+	.about-mission,
+	.about-vision{padding:26px 38px 8px}
+	.about-story{margin-top:40px}
+	.about-mission,
+	.about-vision{margin-top:40px}
+	.about-vision{padding-bottom:60px}
+	.about-story-inner,
+	.about-mission-inner,
+	.about-vision-inner{
+		grid-template-columns:1fr;
+		gap:20px;
+		align-items:start;
+	}
+	.about-story-copy,
+	.about-mission-card,
+	.about-vision-copy{max-width:none}
+	.about-story-copy h3,
+	.about-mission-card h3,
+	.about-vision-copy h3{font-size:24px;margin-bottom:10px}
+	.about-story-copy h3{font-size:26px}
+	.about-story-copy p,
+	.about-mission-card p,
+	.about-vision-copy p{font-size:9px;line-height:1.35;margin-bottom:8px}
+	.about-story-copy p{font-size:11px;line-height:1.45}
+	.about-story-media,
+	.about-mission-media,
+	.about-vision-media{justify-content:center}
+	.about-mission-media{min-height:auto}
+	.story-main,
+	.mission-main,
+	.vision-main{width:100%;max-width:260px}
+	.vision-main{max-width:250px}
+	.vision-overlay{right:8%;bottom:13%;width:32%;max-width:118px}
+	.story-main{max-width:230px}
+	.story-overlay{right:10%;bottom:14%;width:56%;max-width:180px;background-color:transparent;border:none}
+	.about-story-copy,
+	.about-vision-copy{justify-self:stretch;margin-left:0}
+	.about-mission-card{padding:28px 18px;border-radius:12px;min-height:320px}
+	.about-story-copy h3,
+	.about-vision-copy h3,
+	.about-mission-card h3{font-size:22px}
+	.about-vision-copy h3{font-size:26px}
+	.about-vision-copy p{font-size:11px;line-height:1.45}
+	.story-overlay,
+	.mission-overlay,
+	.vision-overlay{bottom:7%;width:38%}
+}
+
+@media (max-width:420px){
+	.about-hero-copy h1{font-size:30px}
+	.about-hero-copy h2{font-size:13px}
+	.about-story,
+	.about-mission,
+	.about-vision{padding:20px 10px 6px}
+	.about-mission,
+	.about-vision{margin-top:14px}
+	.about-vision{padding-bottom:40px}
+	.about-story-inner,
+	.about-mission-inner,
+	.about-vision-inner{gap:10px}
+	.about-story-copy h3,
+	.about-mission-card h3,
+	.about-vision-copy h3{font-size:18px}
+	.about-vision-copy h3{font-size:20px}
+	.about-story-copy h3{font-size:20px}
+	.about-story-copy p,
+	.about-mission-card p,
+	.about-vision-copy p{font-size:7px;line-height:1.32}
+	.about-vision-copy p{font-size:9px;line-height:1.38}
+	.about-story-copy p{font-size:9px;line-height:1.38}
+	.story-main,
+	.mission-main,
+	.vision-main{width:100%;max-width:190px}
+	.story-overlay,
+	.mission-overlay,
+	.vision-overlay{width:43%}
+	.vision-main{max-width:180px}
+	.vision-overlay{right:8%;bottom:12%;max-width:100px}
+	.about-mission-card{padding:20px 12px;border-radius:10px;min-height:250px}
+}
+
+@media (max-width:780px){
+	.about-story-inner{
+		grid-template-columns:1fr;
+		gap:18px;
+	}
+	.about-story-media{
+		max-width:100%;
+		justify-self:center;
+	}
+	.about-story-copy{
+		justify-self:center;
+		max-width:92%;
+	}
+	.story-main{
+		max-width:300px;
+	}
+	.story-overlay{
+		right:20%;
+		bottom:14%;
+		width:48%;
+		max-width:180px;
+		background-color:transparent;
+		border:none;
+	}
+}
+

@@ -1,0 +1,143 @@
+.how-works-section {
+  width: 100%;
+  background: #fff;
+  padding: 48px 0 32px 0;
+  text-align: center;
+}
+
+.how-works-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 38px;
+  color: #181c32;
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+.how-works-steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.how-works-step {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 180px;
+}
+
+.how-works-circle {
+  width: 38px;
+  height: 38px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  z-index: 2;
+}
+
+.how-works-step-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #181c32;
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+.how-works-step-desc {
+  font-size: 0.95rem;
+  color: #444b5a;
+  opacity: 0.85;
+  max-width: 210px;
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+.how-works-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 100%;
+  width: 100%;
+  height: 0;
+  border-top: 3px dashed #2563eb;
+  z-index: 1;
+}
+
+/* Add left dashed line for all except the first step */
+.how-works-step:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  right: 100%;
+  width: 100%;
+  height: 0;
+  border-top: 3px dashed #2563eb;
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  .how-works-steps {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .how-works-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* Ensure no dashed line before the first step and after the last step */
+.how-works-step:first-child::before {
+  display: none !important;
+  content: '' !important;
+  border-top: none !important;
+}
+.how-works-step:last-child::after {
+  display: none !important;
+  content: '' !important;
+  border-top: none !important;
+}
+
+/* Replace per-step connectors with a single centered dashed line limited within the steps container. */
+.how-works-step::before, .how-works-step::after {
+  display: none !important;
+}
+.how-works-steps::before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  /* start/end the dashed line well inside the first/last circles */
+  left: 20%;
+  right: 20%;
+  border-top: 3px dashed #2563eb;
+  z-index: 1;
+}
+
+/* When this component appears inside the features page, allow it to
+   break out of the normal page container so the section background
+   and connectors can span the full viewport while inner content
+   remains aligned with the page sides. */
+.features-page .how-works-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  padding: 48px var(--page-side) 32px;
+}
+
+.features-page .how-works-steps {
+  max-width: calc(100% - (var(--page-side) * 2));
+  margin: 0 auto;
+}
