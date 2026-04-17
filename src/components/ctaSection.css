@@ -104,7 +104,16 @@
 }
 
 /* Keep CTA content from adding extra spacing at the bottom */
-.features-page .cta-section .cta-content { padding-bottom: 0 }
+.features-page .cta-section .cta-content {
+  padding-bottom: 0;
+  transform: translateY(-76px);
+}
+
+@media (max-width: 900px) {
+  .features-page .cta-section .cta-content {
+    transform: translateY(-46px);
+  }
+}
 
 @media (max-width: 900px) {
   .cta-section {

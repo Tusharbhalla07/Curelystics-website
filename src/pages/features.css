@@ -1,6 +1,17 @@
 .features-page{
 	width: calc(100% - (var(--page-side) * 2));
-	margin: 10px auto 0; /* remove bottom gap so CTA can meet footer */
+	margin: 10px auto -64px; /* offset global main-content bottom padding so CTA touches footer */
+	background: #f2f4f7;
+	box-shadow: 0 0 0 100vmax #f2f4f7;
+	clip-path: inset(0 -100vmax);
+}
+
+@media (max-width:900px){
+	.features-page{margin:10px auto -48px}
+}
+
+@media (max-width:420px){
+	.features-page{margin:10px auto -28px}
 }
 
 .features-hero{
@@ -12,9 +23,9 @@
 	margin-left: -50vw;
 	margin-right: -50vw;
 	box-sizing: border-box;
-	background: #fff;
+	background: #ffffff;
 	border-radius: 0;
-	padding: 28px var(--page-side);
+	padding: 56px var(--page-side) 72px;
 	display: grid;
 	grid-template-columns: 1.08fr 0.92fr;
 	gap: 28px;
@@ -64,14 +75,15 @@
 
 .features-hero-copy{
 	padding-left: 220px;
+	padding-top: 14px;
 }
 
 @media (max-width: 1200px) {
-	.features-hero-copy{padding-left: 140px}
+	.features-hero-copy{padding-left: 140px;padding-top: 18px}
 }
 
 @media (max-width: 960px) {
-	.features-hero-copy{padding-left: 20px}
+	.features-hero-copy{padding-left: 20px;padding-top: 14px}
 }
 
 .features-hero-media{
@@ -91,7 +103,7 @@
 		 and lift it a bit to give extra space below the image */
 	 position: absolute;
 	 right: var(--page-side);
-	 bottom: 24px;
+	 bottom: 10px;
 	transform: none;
 }
 
@@ -174,7 +186,7 @@
 }
 
 .features-blue-strip{
-	margin: 100px 0 100px 0;
+	margin: 100px 0 150px 0;
 	background: #1f5df1;
 	border-radius: 4px;
 	color: #ffffff;
@@ -203,7 +215,7 @@
 @media (max-width: 960px){
 	.features-hero{
 		grid-template-columns: 1fr;
-		padding: 18px;
+		padding: 18px 18px 64px;
 		gap: 18px;
 	}
 

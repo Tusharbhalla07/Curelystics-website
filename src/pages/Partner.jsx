@@ -98,7 +98,7 @@ export default function Partner(){
 
         <div className="partner-title-block">
           <h2 className="partner-title">Why Partner With Us ?</h2>
-          <p className="partner-title-sub">Streamline your OPD, empower your staff, and deliver better patient care.</p>
+          <p className="partner-title-sub">Streamline your OPD, empower your staff, and deliver<br />better patient care.</p>
         </div>
 
         <div className="partner-feature-list">
