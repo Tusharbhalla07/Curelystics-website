@@ -52,8 +52,8 @@ const partnerFeatures = [
   },
   {
     title: 'Data Security',
-    line1: 'Enterprise-grade encryption and secure data handling to',
-    line2: 'protect patient privacy at every step.',
+    line1: 'We prioritize patient privacy with enterprise-grade',
+    line2: 'encryption and secure data handling practices.',
     icon: lockedIcon,
     image: doctor4,
     reverse: false

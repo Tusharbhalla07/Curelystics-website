@@ -2,13 +2,13 @@
 
 /* About page styles */
 .about-page{
-	width:100vw;
+	width:100%;
 	max-width:none;
-	margin:12px -50vw 48px;
+	margin:50px auto -64px;
 	padding:0;
 	position:relative;
-	left:50%;
-	right:50%;
+	left:auto;
+	right:auto;
 	background:#ffffff;
 	border:1px solid rgba(8,16,41,0.05);
 	font-family:'Poppins', sans-serif;
@@ -28,12 +28,12 @@
 	gap:48px;
 	align-items:center;
 	min-height:490px;
-	padding:82px 88px;
+	padding:82px 40px;
 	max-width:none;
 	margin:0 auto;
 }
 
-.about-hero-copy{padding-left:44px}
+.about-hero-copy{padding-left:24px}
 
 .about-hero-copy h1{
 	font-size:64px;
@@ -79,7 +79,7 @@
 .about-story,
 .about-mission,
 .about-vision{
-	padding:52px 88px 20px;
+	padding:52px 40px 20px;
 }
 
 .about-story{
@@ -114,12 +114,12 @@
 }
 .about-vision-inner{
 	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
-	gap:144px;
+	gap:48px;
 }
 
 .about-story-inner{
 	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
-	gap:144px;
+	gap:48px;
 }
 
 .about-story-media,
@@ -131,17 +131,17 @@
 	align-items:flex-end;
 }
 
-.about-story-media{justify-content:flex-end;align-items:center;min-width:0;max-width:none;justify-self:stretch}
-.about-vision-media{justify-content:flex-end;align-items:center;min-width:0;max-width:none;justify-self:stretch}
+.about-story-media{justify-content:flex-start;align-items:center;min-width:0;max-width:none;justify-self:stretch;padding-left:96px}
+.about-vision-media{justify-content:flex-start;align-items:center;min-width:0;max-width:none;justify-self:stretch;padding-left:96px}
 
 .about-mission-media{
 	width:100%;
 	max-width:none;
 	min-height:auto;
 	justify-self:stretch;
-	justify-content:flex-start;
+	justify-content:flex-end;
 	align-items:center;
-	padding-left:24px;
+	padding-left:0;
 }
 
 .about-story-media img,
@@ -151,15 +151,15 @@
 	box-shadow:0 10px 26px rgba(8,16,41,0.14);
 }
 
-.story-main{width:96%;max-width:520px;border-radius:22px;box-shadow:0 8px 18px rgba(8,16,41,0.12)}
+.story-main{width:100%;max-width:680px;border-radius:22px;box-shadow:0 8px 18px rgba(8,16,41,0.12)}
 .story-overlay{
 	position:absolute;
 	/* moved further right per request */
 	right:-18%;
 	bottom:14%;
 	/* increase overlay size for a stronger visual */
-	width:50%;
-	max-width:240px;
+	width:58%;
+	max-width:300px;
 	border-radius:18px;
 	transform:none;
 	box-shadow:0 8px 18px rgba(8,16,41,0.12);
@@ -173,7 +173,7 @@
 	max-width:none;
 }
 
-.about-mission-card{max-width:none;width:100%}
+.about-mission-card{max-width:660px;width:100%;justify-self:start;margin-left:104px}
 
 .about-story-copy h3,
 .about-vision-copy h3,
@@ -187,8 +187,8 @@
 }
 
 .about-story-copy h3{
-	font-size:30px;
-	margin-bottom:12px;
+	font-size:36px;
+	margin-bottom:24px;
 }
 
 .about-story-copy p,
@@ -203,14 +203,36 @@
 }
 
 .about-story-copy p{
-	font-size:14px;
-	line-height:1.6;
+	font-size:17px;
+	line-height:1.9;
+	letter-spacing:0.2px;
+	word-spacing:0.8px;
 	margin-bottom:12px;
 }
 
+.about-story-copy p:first-of-type{
+	margin-bottom:28px;
+}
+
+.about-story-copy p:nth-of-type(2){
+	margin-bottom:30px;
+}
+
+.about-story-copy p:nth-of-type(3){
+	margin-bottom:30px;
+}
+
+.about-story-copy p:nth-of-type(4){
+	margin-bottom:30px;
+}
+
+.about-story-copy p:nth-of-type(5){
+	margin-bottom:30px;
+}
+
 .about-mission-card{
-	padding:42px 40px 38px;
-	min-height:0;
+	padding:56px 42px 52px;
+	min-height:780px;
 	background:linear-gradient(180deg, #1a4dbe, #0d3ba7);
 	border-radius:22px;
 	box-shadow:0 10px 22px rgba(8,16,41,0.16);
@@ -218,7 +240,7 @@
 
 .about-mission-card h3{font-size:62px;line-height:1.02;margin-bottom:20px}
 
-.about-mission-card p{font-size:18px;line-height:1.5;margin-bottom:14px}
+.about-mission-card p{font-size:18px;line-height:1.65;margin-bottom:18px}
 
 .about-story-copy,
 .about-vision-copy{
@@ -228,8 +250,8 @@
 .about-story-copy{
 	justify-self:start;
 	width:100%;
-	max-width:none;
-	margin-left:0;
+	max-width:620px;
+	margin-left:84px;
 	min-height:auto;
 	padding-top:0;
 	padding-bottom:0;
@@ -244,13 +266,15 @@
 }
 
 .about-vision-copy h3{
-	font-size:38px;
+	font-size:44px;
 	margin-bottom:14px;
 }
 
 .about-vision-copy p{
-	font-size:14px;
-	line-height:1.6;
+	font-size:17px;
+	line-height:1.75;
+	letter-spacing:0.2px;
+	word-spacing:0.8px;
 	margin-bottom:12px;
 }
 
@@ -263,9 +287,10 @@
 
 .mission-main{
 	width:100%;
-	max-width:520px;
+	max-width:660px;
 	border-radius:22px;
 	box-shadow:0 8px 18px rgba(8,16,41,0.12);
+	transform:translateX(-86px);
 }
 .mission-overlay{
 	position:absolute;
@@ -278,7 +303,7 @@
 	box-shadow:0 8px 18px rgba(8,16,41,0.12);
 }
 
-.vision-main{width:96%;max-width:520px;border-radius:22px;box-shadow:0 8px 18px rgba(8,16,41,0.12)}
+.vision-main{width:100%;max-width:680px;border-radius:22px;box-shadow:0 8px 18px rgba(8,16,41,0.12)}
 .vision-overlay{
 	position:absolute;
 	right:6%;
@@ -291,7 +316,7 @@
 }
 
 @media (max-width: 960px){
-	.about-page{margin:10px auto 36px}
+	.about-page{margin:50px auto -48px}
 	.about-hero-inner{grid-template-columns:1fr;gap:16px;min-height:auto;padding:20px}
 	.about-hero-copy{padding-left:0}
 	.about-hero-image{height:auto}
@@ -300,7 +325,7 @@
 	.about-hero-copy p{font-size:14px}
 	.about-story,
 	.about-mission,
-	.about-vision{padding:26px 38px 8px}
+	.about-vision{padding:26px 12px 8px}
 	.about-story{margin-top:40px}
 	.about-mission,
 	.about-vision{margin-top:40px}
@@ -318,30 +343,32 @@
 	.about-story-copy h3,
 	.about-mission-card h3,
 	.about-vision-copy h3{font-size:24px;margin-bottom:10px}
-	.about-story-copy h3{font-size:26px}
+	.about-story-copy h3{font-size:32px}
 	.about-story-copy p,
 	.about-mission-card p,
 	.about-vision-copy p{font-size:9px;line-height:1.35;margin-bottom:8px}
-	.about-story-copy p{font-size:11px;line-height:1.45}
+	.about-story-copy p{font-size:14px;line-height:1.7;letter-spacing:0.15px;word-spacing:0.6px}
 	.about-story-media,
 	.about-mission-media,
 	.about-vision-media{justify-content:center}
+	.about-vision-media{padding-left:0}
 	.about-mission-media{min-height:auto}
 	.story-main,
 	.mission-main,
 	.vision-main{width:100%;max-width:260px}
-	.vision-main{max-width:250px}
+	.mission-main{max-width:290px;transform:translateX(-26px)}
+	.vision-main{max-width:230px}
 	.vision-overlay{right:8%;bottom:13%;width:32%;max-width:118px}
 	.story-main{max-width:230px}
 	.story-overlay{right:10%;bottom:14%;width:56%;max-width:180px;background-color:transparent;border:none}
 	.about-story-copy,
 	.about-vision-copy{justify-self:stretch;margin-left:0}
-	.about-mission-card{padding:28px 18px;border-radius:12px;min-height:320px}
+	.about-mission-card{padding:28px 18px;border-radius:12px;min-height:320px;margin-left:48px}
 	.about-story-copy h3,
 	.about-vision-copy h3,
 	.about-mission-card h3{font-size:22px}
-	.about-vision-copy h3{font-size:26px}
-	.about-vision-copy p{font-size:11px;line-height:1.45}
+	.about-vision-copy h3{font-size:32px}
+	.about-vision-copy p{font-size:14px;line-height:1.68;letter-spacing:0.15px;word-spacing:0.6px}
 	.story-overlay,
 	.mission-overlay,
 	.vision-overlay{bottom:7%;width:38%}
@@ -362,22 +389,23 @@
 	.about-story-copy h3,
 	.about-mission-card h3,
 	.about-vision-copy h3{font-size:18px}
-	.about-vision-copy h3{font-size:20px}
-	.about-story-copy h3{font-size:20px}
+	.about-vision-copy h3{font-size:24px}
+	.about-story-copy h3{font-size:24px}
 	.about-story-copy p,
 	.about-mission-card p,
 	.about-vision-copy p{font-size:7px;line-height:1.32}
-	.about-vision-copy p{font-size:9px;line-height:1.38}
-	.about-story-copy p{font-size:9px;line-height:1.38}
+	.about-vision-copy p{font-size:11px;line-height:1.58;letter-spacing:0.1px;word-spacing:0.4px}
+	.about-story-copy p{font-size:11px;line-height:1.58;letter-spacing:0.1px;word-spacing:0.4px}
 	.story-main,
 	.mission-main,
 	.vision-main{width:100%;max-width:190px}
+	.mission-main{max-width:210px;transform:translateX(-16px)}
 	.story-overlay,
 	.mission-overlay,
 	.vision-overlay{width:43%}
-	.vision-main{max-width:180px}
+	.vision-main{max-width:190px}
 	.vision-overlay{right:8%;bottom:12%;max-width:100px}
-	.about-mission-card{padding:20px 12px;border-radius:10px;min-height:250px}
+	.about-mission-card{padding:20px 12px;border-radius:10px;min-height:250px;margin-left:26px}
 }
 
 @media (max-width:780px){
