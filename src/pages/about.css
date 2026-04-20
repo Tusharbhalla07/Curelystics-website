@@ -173,7 +173,7 @@
 	max-width:none;
 }
 
-.about-mission-card{max-width:none;width:100%}
+.about-mission-card{max-width:600px;width:66%;margin:0 auto}
 
 .about-story-copy h3,
 .about-vision-copy h3,
@@ -209,11 +209,13 @@
 }
 
 .about-mission-card{
-	padding:42px 40px 38px;
-	min-height:0;
+	padding:48px 44px 44px;
+	min-height:560px;
 	background:linear-gradient(180deg, #1a4dbe, #0d3ba7);
 	border-radius:22px;
 	box-shadow:0 10px 22px rgba(8,16,41,0.16);
+	transform:translateX(60px);
+	transition:transform .28s ease;
 }
 
 .about-mission-card h3{font-size:62px;line-height:1.02;margin-bottom:20px}
@@ -255,7 +257,7 @@
 }
 
 .about-mission-card{
-	justify-self:stretch;
+	justify-self:center;
 }
 
 .about-mission-card h3,
@@ -337,6 +339,7 @@
 	.about-story-copy,
 	.about-vision-copy{justify-self:stretch;margin-left:0}
 	.about-mission-card{padding:28px 18px;border-radius:12px;min-height:320px}
+	.about-mission-card{transform:none}
 	.about-story-copy h3,
 	.about-vision-copy h3,
 	.about-mission-card h3{font-size:22px}
