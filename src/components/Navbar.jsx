@@ -33,15 +33,15 @@ export default function Navbar(){
           <NavLink to="/" end className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>Home</NavLink>
           <NavLink to="/about" className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>About</NavLink>
           <NavLink to="/features" className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>Features</NavLink>
-          <NavLink to="/contact" className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>Contact us</NavLink>
+          <a href="/#contact" className="cl-link">Contact us</a>
         </nav>
 
         <div className="cl-cta">
           <NavLink to="/partner" className="cl-link partner-link">Partner with us</NavLink>
-          <NavLink to="/contact" className="cl-cta-btn">
+          <a href="/#contact" className="cl-cta-btn">
             Get Started
             <span className="cl-arrow">⟶</span>
-          </NavLink>
+          </a>
 
           <button
             className={`menu-btn ${open? 'open':''}`}
@@ -70,15 +70,15 @@ export default function Navbar(){
             <NavLink to="/" end onClick={()=>setOpen(false)} className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>Home</NavLink>
             <NavLink to="/about" onClick={()=>setOpen(false)} className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>About</NavLink>
             <NavLink to="/features" onClick={()=>setOpen(false)} className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>Features</NavLink>
-            <NavLink to="/contact" onClick={()=>setOpen(false)} className={({isActive})=> isActive? 'cl-link active' : 'cl-link'}>Contact us</NavLink>
+            <a href="/#contact" onClick={()=>setOpen(false)} className="cl-link">Contact us</a>
             <NavLink to="/partner" onClick={()=>setOpen(false)} className='cl-link partner-link'>Partner with us</NavLink>
           </div>
 
           <div className="mobile-actions">
-            <NavLink to="/contact" onClick={()=>setOpen(false)} className='cl-cta-btn mobile-cta'>
+            <a href="/#contact" onClick={()=>setOpen(false)} className='cl-cta-btn mobile-cta'>
               Get Started
               <span className="cl-arrow">⟶</span>
-            </NavLink>
+            </a>
           </div>
         </div>
       </div>

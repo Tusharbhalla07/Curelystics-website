@@ -16,8 +16,8 @@ import HospitalProblems from '../components/hospitalProblems';
 import CTASection from '../components/ctaSection';
 
 const solutionCards = [
-  { title: 'Smart Appointment Booking', image: smartBookingImage },
-  { title: 'Real-Time Token & Queue System', image: tokenQueueImage },
+  { title: ['Smart Appointment', 'Booking'], image: smartBookingImage },
+  { title: ['Real-Time Token &', 'Queue System'], image: tokenQueueImage },
   { title: 'Notification Systems', image: notificationImage },
   { title: 'Multi-Panel System', image: panelImage },
   { title: 'Family Member Booking', image: familyImage },
@@ -42,8 +42,10 @@ export default function Features(){
             OPD Management
           </h1>
           <p>
-            From smart appointment booking to real-time queue tracking, Curelystics provides everything hospitals need
-            to streamline outpatient operations and enhance patient experience.
+            From smart appointment booking to real-time queue<br />
+            Curelystics provides everything hospitals need to<br />
+            streamline outpatient operations and enhance patient<br />
+            experience.
           </p>
           <button type="button">Get Started</button>
         </div>
@@ -59,12 +61,24 @@ export default function Features(){
           <span style={{ display: 'block', marginBottom: '12px' }}>Solutions</span>
         </h2>
         <div className="features-grid">
-          {solutionCards.map((card) => (
-            <article className="features-card" key={card.title}>
-              <h3>{card.title}</h3>
-              <img src={card.image} alt={card.title} />
-            </article>
-          ))}
+          {solutionCards.map((card) => {
+            const titleText = Array.isArray(card.title) ? card.title.join(' ') : card.title
+            return (
+              <article className="features-card" key={titleText}>
+                <h3>
+                  {Array.isArray(card.title)
+                    ? card.title.map((line, idx) => (
+                        <React.Fragment key={idx}>
+                          {line}
+                          {idx < card.title.length - 1 && <br />}
+                        </React.Fragment>
+                      ))
+                    : card.title}
+                </h3>
+                <img src={card.image} alt={titleText} />
+              </article>
+            )
+          })}
         </div>
         <div className="features-blue-strip">
           <strong>Live Wait Time Prediction</strong>

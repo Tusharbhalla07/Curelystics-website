@@ -36,7 +36,7 @@ export default function Footer(){
           <h6>Legal</h6>
           <ul>
             <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><NavLink to="/terms">Terms of Service</NavLink></li>
             <li><a href="#">Security</a></li>
           </ul>
         </div>

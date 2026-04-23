@@ -9,9 +9,29 @@ import About from './pages/About'
 import Features from './pages/Features'
 import Contact from './pages/Contact'
 import Partner from './pages/Partner'
+import Plans from './pages/Plans'
+import TermsOfService from './pages/TermsOfService'
 
 function AnimatedRoutes(){
 	const location = useLocation()
+
+	// Scroll to top on every route change
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [location.pathname])
+
+	// Redirect /contact to / and scroll to #contact
+	useEffect(() => {
+		if (location.pathname === '/contact') {
+			window.history.replaceState({}, '', '/')
+			setTimeout(() => {
+				const contactSection = document.getElementById('contact')
+				if (contactSection) {
+					contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' })
+				}
+			}, 50)
+		}
+	}, [location.pathname])
 
 	return (
 		<AnimatePresence mode="wait">
@@ -22,13 +42,15 @@ function AnimatedRoutes(){
 				exit={{ opacity: 0, y: -8 }}
 				transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
 			>
-				<Routes location={location}>
-					<Route path="/" element={<Home/>} />
-					<Route path="/about" element={<About/>} />
-					<Route path="/features" element={<Features/>} />
-					<Route path="/contact" element={<Contact/>} />
-					<Route path="/partner" element={<Partner/>} />
-				</Routes>
+				   <Routes location={location}>
+					   <Route path="/" element={<Home/>} />
+					   <Route path="/about" element={<About/>} />
+					   <Route path="/features" element={<Features/>} />
+					   {/* Remove Contact route, handled by redirect */}
+					   <Route path="/partner" element={<Partner/>} />
+					   <Route path="/plans" element={<Plans/>} />
+					   <Route path="/terms" element={<TermsOfService/>} />
+				   </Routes>
 			</motion.div>
 		</AnimatePresence>
 	)

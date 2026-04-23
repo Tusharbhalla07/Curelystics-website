@@ -35,11 +35,12 @@ export default function About(){
           </div>
           <div className="about-story-copy">
             <h3>Our Story</h3>
-            <p>Curelystics did not begin in a boardroom.</p>
-            <p>It began with a simple observation. During visits to hospitals across India, especially in Tier 2 and Tier 3 cities, we kept seeing the same thing: long queues. Crowded waiting areas. Patients sitting for hours, unsure of when they would be attended to.</p>
-            <p>Behind the scenes, hospital staff were also struggling. Managing patient flow manually, answering repeated questions about queue status, and handling unstructured OPD systems made daily operations overwhelming.</p>
-            <p>What stood out the most was this: The OPD, one of the busiest parts of any hospital, was still largely undigitized. So we asked a simple question: What if patients could see their wait time and plan their visit instead of waiting endlessly?</p>
-            <p>Today, we are building Curelystics step by step, guided by real hospital insights, early partnerships, and a clear mission to transform OPD care in India.</p>
+            <p>Curelystics didn’t begin in a boardroom.</p>
+            <p>It began with a simple observation. During visits to hospitals across India, especially in Tier 2 and Tier 3 cities, we kept seeing the same thing. Long queues. Crowded waiting areas. Patients sitting for hours, unsure of when they would be attended to.</p>
+            <p>Behind the scenes, hospital staff were also struggling. Managing patient flow manually, answering repeated questions about queue status, and handling unstructured OPD systems made daily operations overwhelming. What stood out the most was this: The OPD, one of the busiest parts of any hospital, was still largely undigitized. So we asked a simple question:</p>
+            <p>What if patients could see their wait time and plan their visit instead of waiting endlessly? That question led to the birth of Curelystics.</p>
+            <p>Curelystics is an OPD-first healthcare platform built to bring visibility, structure, and efficiency into outpatient care. From live queue tracking to smart token systems, we are creating a better experience for both patients and healthcare providers.</p>
+            <p>Today, we are building Curelystics step by step, guided by real hospital insights, early partnerships, and a clear mission to transform outpatient care in India.</p>
           </div>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default function About(){
             <p>At Curelystics, our vision is to transform how healthcare is accessed and experienced across India.</p>
             <p>We envision a future where patients no longer have to wait for hours in crowded hospital corridors, uncertain about their turn, and hospitals no longer struggle with unstructured and inefficient outpatient operations.</p>
             <p>Our goal is to build the digital backbone of outpatient healthcare in India, where every patient has complete visibility, every hospital operates efficiently, and every interaction is powered by intelligent, data-driven systems.</p>
-            <p>We aim to make healthcare faster, more predictable, and stress-free especially for Tier-2 and Tier-3 cities where digital infrastructure is still evolving.</p>
+            <p>We aim to make healthcare faster, more predictable, and stress-<br />free especially for Tier-2 and Tier-3 cities where digital<br />infrastructure is still evolving.</p>
           </div>
         </div>
       </section>

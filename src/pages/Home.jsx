@@ -45,6 +45,18 @@ export default function Home(){
   const [showQuick, setShowQuick] = useState(false)
   const [toast, setToast] = useState({ show: false, message: '' })
 
+  // Scroll to contact section if hash is #contact
+  React.useEffect(() => {
+    if (window.location.hash === '#contact') {
+      const section = document.getElementById('contact')
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }, 100)
+      }
+    }
+  }, [])
+
   const highlightItems = [
     { title: 'Booking', subtitle: 'Appointment scheduling' },
     { title: 'Queue', subtitle: 'Patient flow management' },
@@ -167,7 +179,7 @@ export default function Home(){
                     </motion.p>
 
                     <motion.div className="hero-cta" custom={2} variants={heroVariants} initial="hidden" animate="show">
-                      <NavLink to="/contact" className="hero-inline-btn">Get Started <span className="cta-arrow">⟶</span></NavLink>
+                      <a href="#contact" className="hero-inline-btn">Get Started <span className="cta-arrow">⟶</span></a>
                     </motion.div>
                   </div>
 
@@ -239,7 +251,7 @@ export default function Home(){
       {/* Pioneering block (inserted after Features) */}
       <section className="pioneering-final">
         <div className="pf-inner">
-          <div className="pf-cta-top"><NavLink to="/contact" className="cta-small">Get Started</NavLink></div>
+          <div className="pf-cta-top"><a href="#contact" className="cta-small">Get Started</a></div>
 
           <h2 className="pf-title">Pioneering the Future of Patient Flow</h2>
           <p className="pf-sub">Curelystics Technologies is an early-stage startup born out of a simple observation; the traditional waiting room experience is broken. We're on a mission to transform how healthcare facilities manage their most valuable asset — time.</p>
@@ -255,7 +267,7 @@ export default function Home(){
             </div>
           </div>
 
-          <div className="pf-cta"><NavLink to="/contact" className="cta-primary">Get Started <span className="cta-arrow">➜</span></NavLink></div>
+          <div className="pf-cta"><a href="#contact" className="cta-primary">Get Started <span className="cta-arrow">➜</span></a></div>
 
           <div className="pf-how-section">
             <h3 className="pf-how-title">How It Works</h3>
@@ -282,7 +294,7 @@ export default function Home(){
             <div className="pf-left">
               <h3>How We Are Different</h3>
               <p className="pf-d-sub">Visionary healthcare leaders chose Curelystics for our unique SaaS approach to the patient experience-scalable, secure, and instant.</p>
-              <NavLink to="/contact" className="btn-ghost">Get Started →</NavLink>
+              <a href="#contact" className="btn-ghost">Get Started →</a>
             </div>
             <div className="pf-right">
               <img src={connectorImg} className="pf-connector-img" alt="connectors" aria-hidden />
@@ -319,11 +331,11 @@ export default function Home(){
               ))}
             </div>
 
-            <div className="hl-cta-wrap"><NavLink to="/contact" className="cta-primary hl-cta">Partner with us ➜</NavLink></div>
+            <div className="hl-cta-wrap"><a href="#contact" className="cta-primary hl-cta">Partner with us ➜</a></div>
           </div>
         </section>
 
-        <section className="contact-section">
+        <section className="contact-section" id="contact">
           <div className="contact-inner">
             <div className="contact-card">
               <div className="contact-left">

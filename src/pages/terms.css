@@ -1,0 +1,220 @@
+.terms-section.intro-section {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.terms-section.intro-section .terms-card {
+  font-size: 1.25rem;
+  line-height: 2.1rem;
+}
+.terms-intro-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 32px 0 18px 0;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+.terms-section h2 {
+  text-align: center;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 32px 0 10px 0;
+  color: #111827;
+  letter-spacing: 0.01em;
+}
+.terms-note {
+  background: #f6fafd;
+  border-left: none;
+  border-radius: 10px;
+  padding: 18px 14px;
+  font-size: 1.05rem;
+  color: #222;
+  margin-top: 16px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.02);
+  text-align: center;
+  font-weight: 700;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+}
+.terms-note span {
+  display: block;
+  font-weight: 400;
+  margin-top: 6px;
+}
+.terms-card, .terms-warning {
+  text-align: center;
+}
+.terms-liability {
+  font-style: italic;
+  font-size: 1rem;
+  color: #222;
+  margin: 0 auto 12px auto;
+  max-width: 600px;
+  text-align: center;
+}
+.terms-container {
+  width: 100%;
+  margin: 32px 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+  padding: 24px 80px 32px 80px;
+  font-family: 'Poppins', Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+.terms-title {
+  color: #2563eb;
+  font-size: 3.4rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+.terms-welcome {
+  text-align: center;
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+.terms-section {
+  margin-bottom: 38px;
+}
+.terms-card {
+  background: #f8fafd;
+  border-radius: 12px;
+  padding: 16px 24px;
+  color: #222;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
+  width: 100%;
+  box-sizing: border-box;
+}
+.terms-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+  width: 100%;
+}
+.terms-mini-card {
+  flex: 1;
+  background: #f1f5fd;
+  border-radius: 10px;
+  padding: 12px 10px;
+  font-size: 0.97rem;
+  color: #222;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.02);
+}
+.terms-warning {
+  background: #ffe6e1;
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #222;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  margin-top: 6px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
+}
+.terms-warning-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+.terms-note {
+  background: #f6fafd;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.97rem;
+  color: #222;
+  margin-top: 6px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.02);
+}
+.terms-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0 32px 0;
+  gap: 18px;
+}
+.terms-actions label,
+.terms-actions .terms-checkbox {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 0.98rem;
+  color: #222;
+}
+.terms-actions p {
+  text-align: center;
+  margin: 0 0 4px 0;
+  color: #222;
+  font-size: 0.97rem;
+}
+.terms-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  background: #fff;
+  border: 2px solid #ededed;
+  border-radius: 8px;
+  padding: 24px 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.03);
+}
+.terms-checkbox {
+  font-size: 0.97rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.terms-buttons {
+  display: flex;
+  gap: 12px;
+}
+.accept-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 38px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+.accept-btn:hover {
+  background: #222;
+}
+.close-btn {
+  background: #fff;
+  color: #111;
+  border: 2px solid #bdbdbd;
+  border-radius: 8px;
+  padding: 14px 38px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.close-btn:hover {
+  background: #f3f4f6;
+  border-color: #888;
+}
+@media (max-width: 600px) {
+  .terms-container {
+    padding: 10px 2px 18px 2px;
+  }
+  .terms-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -52,8 +52,8 @@ const partnerFeatures = [
   },
   {
     title: 'Data Security',
-    line1: 'Enterprise-grade encryption and secure data handling to',
-    line2: 'protect patient privacy at every step.',
+    line1: 'We prioritize patient privacy with enterprise-grade',
+    line2: 'encryption and secure data handling practices.',
     icon: lockedIcon,
     image: doctor4,
     reverse: false
@@ -89,7 +89,7 @@ export default function Partner(){
               <span className="partner-intro-line">reduces waiting times, and empowers your staff all</span>
               <span className="partner-intro-line">while enhancing the patient experience.</span>
             </p>
-            <NavLink to="/contact" className="partner-top-cta">Join us now <span aria-hidden="true">&#8594;</span></NavLink>
+            <NavLink to="/plans" className="partner-top-cta">Join with us now <span aria-hidden="true">&#8594;</span></NavLink>
           </div>
           <div className="partner-top-media">
             <img src={heroRoundImage} alt="Hospital staff collaborating" />
@@ -135,7 +135,7 @@ export default function Partner(){
             hospital ?
           </h4>
           <p>Join the digital revolution, streamline your OPD, empower your staff, and deliver a seamless patient experience.</p>
-          <NavLink to="/contact" className="partner-bottom-cta">Join us now <span aria-hidden="true">&#8594;</span></NavLink>
+          <NavLink to="/plans" className="partner-bottom-cta">Join with us now <span aria-hidden="true">&#8594;</span></NavLink>
         </div>
       </div>
     </motion.section>
