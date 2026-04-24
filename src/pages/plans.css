@@ -261,3 +261,46 @@ input:checked + .slider:before {
     padding: 24px 6px 18px 6px;
   }
 }
+
+@media (max-width: 600px) {
+  .plans-page {
+    padding: 20px 0;
+  }
+
+  .plans-container {
+    margin-top: 62px;
+    border-radius: 12px;
+    padding: 18px 10px 14px;
+  }
+
+  .plans-title {
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+  }
+
+  .plans-sub {
+    font-size: 0.95rem;
+  }
+
+  .plans-toggle-row {
+    gap: 10px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+
+  .plans-security-row {
+    margin-bottom: 80px;
+    padding: 14px 10px 12px;
+  }
+
+  .security-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .security-icon-card {
+    min-width: 92px;
+    padding: 12px 10px;
+  }
+}

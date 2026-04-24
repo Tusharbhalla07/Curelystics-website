@@ -18,7 +18,7 @@
 	margin:0;
 	background:linear-gradient(180deg, #0f4fcd 0%, #0a3db5 100%);
 	color:#fff;
-	border-radius:20px 20px 0 0; /* remove bottom corner radius */
+	border-radius:6px 6px 0 0; /* further reduced top corner radius */
 	overflow:hidden;
 }
 
@@ -462,3 +462,99 @@
   }
 }
 /* --- End Mobile Responsiveness Polish --- */
+
+/* Responsiveness hardening */
+@media (max-width: 1200px) {
+	.about-hero-inner {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: 28px;
+		padding: 56px 24px;
+	}
+
+	.about-hero-copy h1 { font-size: clamp(38px, 5vw, 56px); }
+	.about-hero-copy h2 { font-size: clamp(22px, 3vw, 32px); }
+	.about-hero-copy p { font-size: clamp(15px, 1.5vw, 18px); }
+}
+
+@media (max-width: 900px) {
+	.about-hero-inner,
+	.about-story-inner,
+	.about-mission-inner,
+	.about-vision-inner {
+		grid-template-columns: 1fr !important;
+		gap: 18px !important;
+	}
+
+	.about-story-copy,
+	.about-vision-copy,
+	.about-mission-card {
+		margin-left: 0 !important;
+		max-width: 100% !important;
+	}
+
+	.about-story-media,
+	.about-mission-media,
+	.about-vision-media {
+		padding-left: 0 !important;
+		justify-content: center !important;
+	}
+
+	.mission-main,
+	.story-main,
+	.vision-main {
+		max-width: min(520px, 100%) !important;
+		transform: none !important;
+	}
+
+	.about-story-copy h3,
+	.about-vision-copy h3,
+	.about-mission-card h3 {
+		font-size: clamp(26px, 5.2vw, 36px) !important;
+		line-height: 1.18 !important;
+	}
+
+	.about-story-copy p,
+	.about-vision-copy p,
+	.about-mission-card p {
+		font-size: clamp(14px, 2.6vw, 17px) !important;
+		line-height: 1.7 !important;
+	}
+
+	.about-mission-card {
+		min-height: auto !important;
+		padding: 28px 18px !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.about-page {
+		margin: 40px auto -24px;
+	}
+
+	.about-hero-inner {
+		padding: 28px 12px !important;
+	}
+
+	.about-hero-copy h1 {
+		font-size: clamp(30px, 8vw, 38px) !important;
+		margin-bottom: 16px;
+	}
+
+	.about-hero-copy h2 {
+		font-size: clamp(18px, 5vw, 24px) !important;
+		margin-bottom: 18px;
+	}
+
+	.about-story,
+	.about-mission,
+	.about-vision {
+		padding: 20px 10px 8px !important;
+		margin-top: 24px !important;
+	}
+
+	.story-overlay,
+	.mission-overlay,
+	.vision-overlay {
+		max-width: 120px !important;
+	}
+}

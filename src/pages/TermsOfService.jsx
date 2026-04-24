@@ -1,5 +1,8 @@
 import React from 'react';
 import './terms.css';
+import shiIcon from '../assets/shi-removebg-preview.png';
+import shineIcon from '../assets/shine-removebg-preview.png';
+import treeIcon from '../assets/tree-removebg-preview.png';
 
 export default function TermsOfService() {
   return (
@@ -24,26 +27,30 @@ export default function TermsOfService() {
         <h2>Use of Services</h2>
         <div className="terms-row">
           <div className="terms-mini-card">
-            <strong>Authorized Access</strong>
-            <br />
-            Access to Curelystics is permitted only for authorized users and purposes.
+            <div className="terms-mini-header">
+              <img src={shiIcon} alt="Authorized Access" className="terms-mini-header-icon" />
+              <h4 className="terms-mini-title">Authorized Access</h4>
+            </div>
+            <p className="terms-mini-text">Access to Curelystics is intended for patients and<br/>registered healthcare providers. You are responsible for<br/>maintaining the confidentiality of your account credentials and<br/>for all activities under your account.</p>
           </div>
           <div className="terms-mini-card">
-            <strong>Data Accuracy</strong>
-            <br />
-            Users are responsible for providing accurate and up-to-date information.
+            <div className="terms-mini-header">
+              <img src={shineIcon} alt="Data Accuracy" className="terms-mini-header-icon" />
+              <h4 className="terms-mini-title">Data Accuracy</h4>
+            </div>
+            <p className="terms-mini-text">Users are responsible for ensuring that all personal and<br/>appointment-related information entered into the platform<br/>is accurate and up to date. Curelystics is not responsible for<br/>issues arising from incorrect or incomplete information.</p>
           </div>
         </div>
       </section>
       <section className="terms-section">
         <div className="terms-warning">
-          <span className="terms-warning-icon">⚠️</span>
-          <div>
-            <strong>Disclaimer of Medical Advice</strong>
-            <br />
-            The platform delivers information and tools for convenience only. No content is intended as medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
-            <br />
-            In case of a medical emergency, seek care from professionals—never use Curelystics for emergency needs.
+          <img src={treeIcon} alt="Medical Advice Disclaimer" className="terms-warning-tree-icon" />
+          <div className="terms-disclaimer-content">
+            <h3 className="terms-disclaimer-title">Disclaimer of Medical Advice</h3>
+            <p className="terms-disclaimer-text">CURELYSTICS IS NOT A MEDICAL PROVIDER.</p>
+            <p className="terms-disclaimer-text">The platform does not provide medical advice, diagnosis, or treatment. It is intended solely to facilitate appointment booking and patient flow management.</p>
+            <p className="terms-disclaimer-text">All medical decisions, diagnoses, and treatments must be made by licensed healthcare professionals.</p>
+            <p className="terms-disclaimer-text">In case of a medical emergency, do not rely on the platform. Please contact emergency services or a qualified medical practitioner immediately.</p>
           </div>
         </div>
       </section>
@@ -60,8 +67,12 @@ export default function TermsOfService() {
         </div>
       </section>
       <section className="terms-section">
-        <div className="terms-note">
-          <strong>Key Compliance Note:</strong> Our platform is designed to align with applicable healthcare sector standards and regulations.
+        <div className="terms-compliance-note">
+          <h3 className="terms-compliance-title">Key Compliance Note:</h3>
+          <p className="terms-compliance-text">
+            <span className="terms-compliance-line">Our platform is designed to align with applicable healthcare data standards and regulations,</span>
+            <span className="terms-compliance-line">ensuring that patient data remains secure, confidential, and protected.</span>
+          </p>
         </div>
       </section>
       <section className="terms-section">
