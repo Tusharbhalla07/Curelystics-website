@@ -1,0 +1,255 @@
+.security-page {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.security-header {
+  text-align: center;
+  padding: 120px var(--page-side) 60px;
+}
+
+.security-header h1 {
+  font-size: clamp(32px, 5.2vw, 56px);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.15;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+}
+
+.security-header .text-blue {
+  color: #155DFC;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 16px;
+}
+
+.search-icon {
+  color: #888;
+  font-size: 1.1rem;
+  margin-right: 12px;
+}
+
+.search-input-wrapper input {
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  width: 100%;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-input-wrapper input::placeholder {
+  color: #aaa;
+}
+
+.search-btn {
+  background-color: #155DFC;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #104ACC;
+}
+
+.faq-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px var(--page-side) 80px;
+}
+
+.faq-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.faq-item {
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  border-left: 2px solid #d0e0ff;
+  border-radius: 4px;
+  padding: 24px 32px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+  transition: border-left-color 0.2s;
+}
+
+.faq-item:hover {
+  border-left-color: #155DFC;
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #155DFC;
+  margin-top: 0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.badge {
+  background-color: #ffe8d6;
+  color: #e67e22;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.still-help-section {
+  background-color: #f7f9fb;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.still-help-section::before {
+  content: '';
+  position: absolute;
+  right: -50px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 100px 100px, rgba(21, 93, 252, 0.04) 2%, transparent 2.5%),
+    radial-gradient(circle at 50px 200px, rgba(21, 93, 252, 0.04) 2%, transparent 2.5%),
+    linear-gradient(45deg, transparent 48%, rgba(21, 93, 252, 0.04) 50%, transparent 52%);
+  background-size: 100px 100px;
+  z-index: 1;
+}
+
+.still-help-section h2,
+.still-help-section p,
+.still-help-section button {
+  position: relative;
+  z-index: 2;
+}
+
+.still-help-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.still-help-section p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 auto 32px auto;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.contact-support-btn {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.contact-support-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Unified Responsive Strategy for Security Page */
+@media (max-width: 960px) {
+  .security-header {
+    padding-top: 100px;
+  }
+
+  .faq-item {
+    padding: 24px;
+  }
+
+  .search-container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .security-header {
+    padding-top: 80px;
+  }
+
+  .security-header h1 {
+    font-size: 32px;
+  }
+
+  .faq-section h2 {
+    font-size: 24px;
+  }
+
+  .faq-item h3 {
+    font-size: 18px;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+    padding-left: 8px;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}

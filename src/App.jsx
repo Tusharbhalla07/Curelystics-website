@@ -11,6 +11,8 @@ import Contact from './pages/Contact'
 import Partner from './pages/Partner'
 import Plans from './pages/Plans'
 import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import Security from './pages/Security'
 
 function AnimatedRoutes(){
 	const location = useLocation()
@@ -50,6 +52,8 @@ function AnimatedRoutes(){
 					   <Route path="/partner" element={<Partner/>} />
 					   <Route path="/plans" element={<Plans/>} />
 					   <Route path="/terms" element={<TermsOfService/>} />
+					   <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+					   <Route path="/security" element={<Security/>} />
 				   </Routes>
 			</motion.div>
 		</AnimatePresence>

@@ -34,18 +34,24 @@ export default function Features(){
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="smart-features-header">
-        <div className="sfh-overlay"></div>
-        <div className="sfh-content">
-          <motion.h2 className="sfh-title" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            Smart Features for<br/>Seamless OPD Care
-          </motion.h2>
-          <motion.p className="sfh-subtitle" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
-            Simplifying appointments and queue tracking<br/>for better OPD flow
-          </motion.p>
-          <motion.a href="#contact" className="sfh-cta" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-            Get Started <span className="cta-arrow">⟶</span>
-          </motion.a>
+      <div className="features-hero">
+        <div className="features-hero-copy">
+          <h1>
+            Powerful Features<br />
+            Built for Modern<br />
+            OPD Management
+          </h1>
+          <p>
+            From smart appointment booking to real-time queue<br />
+            Curelystics provides everything hospitals need to<br />
+            streamline outpatient operations and enhance patient<br />
+            experience.
+          </p>
+          <button type="button">Get Started</button>
+        </div>
+
+        <div className="features-hero-media" aria-label="Healthcare team visual">
+          <img className="features-main-image" src={kaImage} alt="Hero visual" />
         </div>
       </div>
 

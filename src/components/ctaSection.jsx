@@ -7,9 +7,9 @@ export default function CTASection() {
     <section className="cta-section">
       <div className="cta-content">
         <h2 className="cta-title">
-          Ready to transform your<br /><span style={{ display: 'inline-block', height: '12px' }}></span>hospital operations?
+          Ready to transform your<br />hospital operations?
         </h2>
-        <button className="cta-btn">Partner With Us</button>
+        <button className="cta-btn">Partner With Us <span>⟶</span></button>
       </div>
       <div className="cta-image-wrap">
         <img src={ctaImage} alt="Doctor and patient" className="cta-image" />

@@ -1,143 +1,92 @@
 .how-works-section {
   width: 100%;
-  background: #fff;
-  padding: 48px 0 32px 0;
+  background: #ffffff;
+  padding: 100px 0;
   text-align: center;
 }
 
 .how-works-title {
-  font-size: 1.7rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 38px;
-  color: #181c32;
-  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  margin-bottom: 80px;
+  color: #0b0f19;
 }
 
 .how-works-steps {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 0;
-  position: relative;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+}
+
+.how-works-steps::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 16.6%;
+  right: 16.6%;
+  border-top: 2px dotted #2563eb;
+  z-index: 1;
 }
 
 .how-works-step {
-  flex: 1 1 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  min-width: 180px;
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+}
+
+.how-works-step:hover {
+  transform: translateY(-8px);
 }
 
 .how-works-circle {
-  width: 38px;
-  height: 38px;
+  width: 60px;
+  height: 60px;
   background: #2563eb;
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 16px;
-  z-index: 2;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.how-works-step:hover .how-works-circle {
+  transform: scale(1.15);
+  background: #155DFC;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
 }
 
 .how-works-step-title {
-  font-size: 1.08rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 8px;
-  color: #181c32;
-  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  margin-bottom: 12px;
+  color: #0b0f19;
 }
 
 .how-works-step-desc {
-  font-size: 0.95rem;
-  color: #444b5a;
-  opacity: 0.85;
-  max-width: 210px;
-  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 240px;
 }
 
-.how-works-step:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 19px;
-  left: 100%;
-  width: 100%;
-  height: 0;
-  border-top: 3px dashed #2563eb;
-  z-index: 1;
-}
-
-/* Add left dashed line for all except the first step */
-.how-works-step:not(:first-child)::before {
-  content: '';
-  position: absolute;
-  top: 19px;
-  right: 100%;
-  width: 100%;
-  height: 0;
-  border-top: 3px dashed #2563eb;
-  z-index: 1;
-}
-
-@media (max-width: 700px) {
-  .how-works-steps {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .how-works-step:not(:last-child)::after {
-    display: none;
-  }
-}
-
-/* Ensure no dashed line before the first step and after the last step */
-.how-works-step:first-child::before {
-  display: none !important;
-  content: '' !important;
-  border-top: none !important;
-}
-.how-works-step:last-child::after {
-  display: none !important;
-  content: '' !important;
-  border-top: none !important;
-}
-
-/* Replace per-step connectors with a single centered dashed line limited within the steps container. */
-.how-works-step::before, .how-works-step::after {
-  display: none !important;
-}
-.how-works-steps::before {
-  content: '';
-  position: absolute;
-  top: 19px;
-  /* start/end the dashed line well inside the first/last circles */
-  left: 20%;
-  right: 20%;
-  border-top: 3px dashed #2563eb;
-  z-index: 1;
-}
-
-/* When this component appears inside the features page, allow it to
-   break out of the normal page container so the section background
-   and connectors can span the full viewport while inner content
-   remains aligned with the page sides. */
-.features-page .how-works-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  padding: 48px var(--page-side) 32px;
-}
-
-.features-page .how-works-steps {
-  max-width: calc(100% - (var(--page-side) * 2));
-  margin: 0 auto;
+@media (max-width: 992px) {
+  .how-works-steps { flex-direction: column; gap: 60px; padding: 0 20px; }
+  .how-works-steps::before { display: none; }
+  .how-works-step { width: 100%; }
 }

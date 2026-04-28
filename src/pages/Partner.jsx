@@ -80,14 +80,14 @@ export default function Partner(){
         <div className="partner-top">
           <div className="partner-top-copy">
             <h1>
-              <span className="partner-h1-line">Upgrade Your Hospital</span>
-              <span className="partner-h1-line">with Digital OPD</span>
+              <span className="partner-h1-line">Reduce OPD Waiting Time and</span>
+              <span className="partner-h1-line">Improve Patient Flow Without Increasing Staff</span>
             </h1>
             <p className="partner-intro">
               <span className="partner-intro-line">A complete digital solution designed to streamline</span>
               <span className="partner-intro-line">patient flow and enhance care delivery</span>
             </p>
-            <NavLink to="/plans" className="partner-top-cta">Join with us now <span aria-hidden="true">&#8594;</span></NavLink>
+            <button disabled className="partner-top-cta">Join with us now <span aria-hidden="true">&#8594;</span></button>
           </div>
           <div className="partner-top-media">
             <img src={heroRoundImage} alt="Hospital staff collaborating" />

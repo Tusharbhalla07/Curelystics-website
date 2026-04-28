@@ -10,8 +10,21 @@ export default function Navbar(){
   useEffect(()=>{
     const handleRoute = ()=> setOpen(false)
     window.addEventListener('popstate', handleRoute)
-    return ()=> window.removeEventListener('popstate', handleRoute)
-  },[])
+    
+    if (open) {
+      document.body.classList.add('no-scroll')
+      document.documentElement.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
+      document.documentElement.classList.remove('no-scroll')
+    }
+
+    return ()=>{
+      window.removeEventListener('popstate', handleRoute)
+      document.body.classList.remove('no-scroll')
+      document.documentElement.classList.remove('no-scroll')
+    }
+  },[open])
 
   return (
     <motion.header
@@ -63,7 +76,6 @@ export default function Navbar(){
                 <div className="mobile-sub">Technologies</div>
               </div>
             </div>
-            <button className="mobile-close" onClick={()=>setOpen(false)} aria-label="Close menu">✕</button>
           </div>
 
           <div className="mobile-links">

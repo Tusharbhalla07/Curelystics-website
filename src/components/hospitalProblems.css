@@ -1,7 +1,7 @@
 .hospital-problems-section {
   width: 100%;
-  background: #f8fafb;
-  padding: 48px 0 40px 0;
+  background: #ffffff;
+  padding: 80px 0 100px 0;
   text-align: center;
 }
 
@@ -25,24 +25,32 @@
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(80px, auto);
   gap: 40px 48px;
-  max-width: 1100px;
+  width: 100%;
+  padding: 0 var(--page-side);
   margin: 0 auto 48px auto;
   background: transparent;
-  padding: 0 8px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .hospital-problem-item {
   position: relative;
-  padding: 8px 12px 8px 44px;
+  padding: 24px 24px 24px 48px;
   font-size: 1rem;
   color: #0f172a;
-  min-height: 84px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.hospital-problem-item:hover {
+  background: rgba(21, 93, 252, 0.03);
+  transform: translateX(4px);
 }
 .hospital-problem-item:nth-child(3),
 .hospital-problem-item:nth-child(6) {
@@ -72,13 +80,18 @@
 .hospital-problem-item::before {
   content: '';
   position: absolute;
-  left: 18px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  width: 6px;
-  height: 96px;
-  background: #2563eb;
+  width: 4px;
+  height: 60px;
+  background: #155DFC;
   border-radius: 4px;
+  transition: height 0.3s ease;
+}
+
+.hospital-problem-item:hover::before {
+  height: 80%;
 }
 
 .coming-next-section {
@@ -111,82 +124,121 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  max-width: 900px;
+  width: calc(100% - (var(--page-side) * 2));
   margin: 0 auto;
   background: #fff;
-  border-radius: 18px 18px 32px 32px;
-  box-shadow: 0 8px 18px rgba(37,99,235,0.10), 0 8px 0 0 #2563eb;
-  border: 1.5px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 10px 40px -10px rgba(21, 93, 252, 0.3);
+  border: 1px solid #e5e7eb;
   overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.coming-next-grid::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #155DFC, #72a9ff);
 }
 .coming-next-item {
-  padding: 22px 14px 18px 14px;
-  font-size: 1.05rem;
+  padding: 40px 32px;
+  font-size: 1rem;
   color: #181c32;
-  border-right: 2.5px solid #2563eb22;
-  min-height: 80px;
+  border-right: 1px solid #e5e7eb;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  text-align: left;
+  background: #fff;
+  transition: background 0.3s ease;
 }
+
+.coming-next-item:hover {
+  background: #fcfdfe;
+}
+
 .coming-next-item:last-child {
   border-right: none;
 }
+
 .coming-next-item strong {
   font-weight: 700;
-  font-size: 1.08rem;
-  margin-bottom: 6px;
-  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-family: 'Inter', sans-serif;
+  display: block;
 }
 .coming-next-item span {
   display: block;
-  font-size: 0.97rem;
+  font-size: 0.92rem;
   font-weight: 400;
-  color: #444b5a;
-  opacity: 0.85;
-  margin-top: 4px;
-  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  color: #64748b;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
 }
 
-@media (max-width: 900px) {
-  .hospital-problems-grid, .coming-next-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: none;
-    gap: 20px 0;
+@media (max-width: 992px) {
+  .hospital-problems-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 16px;
   }
-  .hospital-problem-item, .coming-next-item {
-    padding-left: 28px;
+
+  .hospital-problem-item {
+    padding-left: 36px;
+    min-height: 0;
+  }
+
+  .hospital-problems-title {
+    font-size: 1.6rem;
+    padding: 0 16px;
+  }
+
+  .coming-next-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .coming-next-grid {
+    grid-template-columns: 1fr !important;
+    border-radius: 16px;
+    margin: 0 16px;
+  }
+
+  .coming-next-item {
+    border-right: none;
+    border-bottom: 1.5px solid #e5e7eb;
+    padding: 24px 16px;
+  }
+
+  .coming-next-item:last-child {
+    border-bottom: none;
   }
 }
 
-/* When this component appears inside the features page, stretch the grids
-   to align with the page sides so the content is spread left-to-right. */
-.features-page .hospital-problems-section .hospital-problems-grid,
-.features-page .hospital-problems-section .coming-next-grid {
-  max-width: none;
-  width: calc(100% - (var(--page-side) * 2));
-  margin: 0 auto;
-  padding: 0 var(--page-side);
-}
+/* Ensure Features page context respects mobile grid layout */
+@media (max-width: 992px) {
+  .features-page .hospital-problems-section .hospital-problems-grid,
+  .features-page .hospital-problems-section .coming-next-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+    margin: 0 auto;
+  }
 
-.features-page .hospital-problems-section .hospital-problems-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.features-page .hospital-problems-section .coming-next-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* Also stretch the whole hospital-problems section background to the
-   viewport edges when inside the features page so the pale surface
-   fills edge-to-edge while inner grids remain aligned. */
-.features-page .hospital-problems-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  padding: 48px var(--page-side) 40px;
+  .features-page .hospital-problems-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 40px 0;
+  }
 }

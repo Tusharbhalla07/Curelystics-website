@@ -1,124 +1,267 @@
 /* Global reset and typography */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap');
 
-html,body,#root{margin:0;padding:0}
-html,body{width:100%;overflow-x:hidden}
+html,
+body,
+#root {
+	margin: 0;
+	padding: 0
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+html.no-scroll,
+body.no-scroll {
+	overflow: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+html.no-scroll::-webkit-scrollbar,
+body.no-scroll::-webkit-scrollbar {
+	display: none;
+}
 
 /* Make sizing predictable and images responsive */
-*,*::before,*::after{box-sizing:border-box}
-img,svg,picture,video{max-width:100%;height:auto;display:block}
-body{overflow-x:hidden}
-
-:root{
-	--accent:#155DFC;
-	--text:#081029;
-	--muted:#475569;
-	--page-bg:#ffffff;
-	--page-side:96px;
-	--scroll-y:0px;
+*,
+*::before,
+*::after {
+	box-sizing: border-box
 }
 
-body{background:var(--page-bg);color:var(--text);font-family:Poppins, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; -webkit-font-smoothing:antialiased}
+img,
+svg,
+picture,
+video {
+	max-width: 100%;
+	height: auto;
+	display: block
+}
+
+body {
+	overflow-x: hidden
+}
+
+:root {
+	--accent: #155DFC;
+	--text: #081029;
+	--muted: #475569;
+	--page-bg: #ffffff;
+	--page-side: clamp(24px, 6vw, 100px);
+	--scroll-y: 0px;
+}
+
+body {
+	background: var(--page-bg);
+	color: var(--text);
+	font-family: Poppins, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+	-webkit-font-smoothing: antialiased
+}
 
 /* Utility class to explicitly apply Poppins to specific text blocks */
-.poppins{font-family:'Poppins', sans-serif; line-height:2}
-
-.App{min-height:100vh;position:relative;isolation:isolate}
-
-.site-parallax-bg{
-	position:fixed;
-	inset:0;
-	z-index:0;
-	pointer-events:none;
-	background:var(--page-bg);
-	transform:translate3d(0, calc(var(--scroll-y) * -0.08), 0);
-	will-change:transform;
+.poppins {
+	font-family: 'Poppins', sans-serif;
+	line-height: 2
 }
 
-.app-content-layer{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column}
+.App {
+	min-height: 100vh;
+	position: relative;
+	isolation: isolate
+}
+
+.site-parallax-bg {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background: var(--page-bg);
+	transform: translate3d(0, calc(var(--scroll-y) * -0.08), 0);
+	will-change: transform;
+}
+
+.app-content-layer {
+	position: relative;
+	z-index: 1;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column
+}
 
 /* Keep natural scrolling behavior to avoid scroll-jumping.
 	Avoid forcing overflow on many elements — that can break scroll chains
 	and cause inner containers to jump to the top when scrolling. */
-html, body { overflow-y: auto; }
+html,
+body {
+	overflow-y: auto;
+}
 
 /* Visual-only scrollbar hiding: keeps native scrolling but hides scrollbars
 	in browsers that support these properties. This does not change overflow behavior. */
-*:not(body)::-webkit-scrollbar{display:none}
-*:not(html):not(body){-ms-overflow-style:none;scrollbar-width:none}
-*:not(html):not(body)::-webkit-scrollbar{display:none}
-
-/* Smooth nav and generic link transitions */
-a{transition:color .22s ease, opacity .22s ease}
-
-/* Utility */
-.container{max-width:100%;margin:0 auto;padding:0 var(--page-side)}
-
-/* Small screen container and typography adjustments */
-@media (max-width: 960px){
-	:root{--page-side:56px}
+*:not(body)::-webkit-scrollbar {
+	display: none
 }
 
-@media (max-width: 420px){
-	:root{--page-side:32px}
-	.container{padding:0 24px}
-	.hero-title{font-size:28px}
-	.hero-sub{font-size:14px;max-width:360px}
+*:not(html):not(body) {
+	-ms-overflow-style: none;
+	scrollbar-width: none
+}
+
+*:not(html):not(body)::-webkit-scrollbar {
+	display: none
+}
+
+/* Smooth nav and generic link transitions */
+a {
+	transition: color .22s ease, opacity .22s ease
+}
+
+/* Utility */
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 var(--page-side)
+}
+
+/* Small screen container and typography adjustments */
+@media (max-width: 960px) {
+	:root {
+		--page-side: 56px
+	}
+}
+
+@media (max-width: 420px) {
+	:root {
+		--page-side: 32px
+	}
+
+	.container {
+		padding: 0 24px
+	}
+
+	.hero-title {
+		font-size: 28px
+	}
+
+	.hero-sub {
+		font-size: 14px;
+		max-width: 360px
+	}
 }
 
 /* Main content spacing that adapts on mobile */
-.main-content{padding:64px 0;flex:1}
-@media (max-width:900px){
-	.main-content{padding:48px 0}
-}
-@media (max-width:420px){
-	.main-content{padding:28px 0}
+.main-content {
+	padding: 64px 0;
+	flex: 1
 }
 
+@media (max-width:900px) {
+	.main-content {
+		padding: 48px 0
+	}
+}
+
+@media (max-width:420px) {
+	.main-content {
+		padding: 28px 0
+	}
+}
 
 
-.page-section{max-width:100%;margin:20px auto;padding:0 var(--page-side)}
+
+.page-section {
+	max-width: 100%;
+	margin: 20px auto;
+	padding: 0 var(--page-side)
+}
+
 .page-section h2,
-.page-section p{transition:transform .28s ease, opacity .28s ease}
+.page-section p {
+	transition: transform .28s ease, opacity .28s ease
+}
 
 /* Give non-home pages a polished surface with gentle motion */
-.page-section{
-	background:#ffffff;
-	border:1px solid rgba(8,16,41,0.06);
-	border-radius:16px;
-	padding-top:24px;
-	padding-bottom:24px;
-	box-shadow:0 12px 28px rgba(8,16,41,0.05);
-	transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s cubic-bezier(.2,.9,.2,1);
+.page-section {
+	background: #ffffff;
+	border: 1px solid rgba(8, 16, 41, 0.06);
+	border-radius: 16px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	box-shadow: 0 12px 28px rgba(8, 16, 41, 0.05);
+	transition: transform .28s cubic-bezier(.2, .9, .2, 1), box-shadow .28s cubic-bezier(.2, .9, .2, 1);
 }
 
-.page-section:hover{
-	transform:translateY(-4px);
-	box-shadow:0 22px 46px rgba(8,16,41,0.08);
+.page-section:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 22px 46px rgba(8, 16, 41, 0.08);
 }
-.page-section h2{margin-top:0}
 
-@media (prefers-reduced-motion: reduce){
-	.site-parallax-bg{transform:none !important}
+.page-section h2 {
+	margin-top: 0
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.site-parallax-bg {
+		transform: none !important
+	}
+
 	a,
 	.page-section,
 	.page-section h2,
-	.page-section p{transition:none !important;animation:none !important}
+	.page-section p {
+		transition: none !important;
+		animation: none !important
+	}
 }
 
 /* Reduce overly-heavy weights used across headings to create a softer visual theme */
-h1,h2,h3,h4,h5,h6, .pf-title, .fs-title, .about-hero-copy h1, .hero-title, .pf-left h3, .pf-card h4 {
-    font-weight:600 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.pf-title,
+.fs-title,
+.about-hero-copy h1,
+.hero-title,
+.pf-left h3,
+.pf-card h4 {
+	font-weight: 600 !important;
 }
-.hero-title, .about-hero-copy h1 { letter-spacing: -0.4px; }
-.cta-primary, .pill, .pd-register { font-weight:600; }
+
+.hero-title,
+.about-hero-copy h1 {
+	letter-spacing: -0.4px;
+}
+
+.cta-primary,
+.pill,
+.pd-register {
+	font-weight: 600;
+}
 
 /* Global responsive safety net */
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
 	max-width: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6, a, span {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
 	overflow-wrap: anywhere;
 }
 
@@ -139,5 +282,41 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 
 	.main-content {
 		padding: 24px 0;
+	}
+}
+
+/* Mobile layout safety net */
+@media (max-width: 600px) {
+	#root {
+		padding: 0;
+		text-align: left;
+	}
+
+	.page-section {
+		margin: 16px auto;
+		padding: 20px 16px;
+	}
+
+	.page-section h2 {
+		font-size: 22px;
+		line-height: 1.2;
+	}
+
+	.page-section p {
+		font-size: 15px;
+		line-height: 1.6;
+	}
+
+	.features-hero,
+	.features-page .cta-section,
+	.features-page .hospital-problems-section,
+	.site-footer,
+	.smart-features-header {
+		width: 100%;
+		left: auto;
+		right: auto;
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
 	}
 }

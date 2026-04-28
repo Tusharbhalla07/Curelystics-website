@@ -35,9 +35,9 @@ export default function Footer(){
         <div className="sf-col sf-legal">
           <h6>Legal</h6>
           <ul>
-            <li><a href="#">Privacy policy</a></li>
+            <li><NavLink to="/privacy-policy">Privacy policy</NavLink></li>
             <li><NavLink to="/terms">Terms of Service</NavLink></li>
-            <li><a href="#">Security</a></li>
+            <li><NavLink to="/security">Help</NavLink></li>
           </ul>
         </div>
       </div>
