@@ -42,7 +42,7 @@
 
 @media (max-width: 600px) {
   .privacy-page {
-    padding-top: 80px;
+    padding: 90px var(--page-side) 48px;
   }
 
   .privacy-header h1 {
@@ -55,6 +55,16 @@
 
   .privacy-box p {
     font-size: 15px;
+  }
+
+  .rights-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contact-list,
+  .contact-list1 {
+    width: 100%;
   }
 }
 

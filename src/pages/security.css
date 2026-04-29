@@ -219,7 +219,7 @@
 
 @media (max-width: 600px) {
   .security-header {
-    padding-top: 80px;
+    padding: 90px var(--page-side) 32px;
   }
 
   .security-header h1 {
@@ -251,5 +251,17 @@
 
   .search-btn {
     width: 100%;
+  }
+
+  .faq-section {
+    padding: 8px var(--page-side) 48px;
+  }
+
+  .faq-item {
+    padding: 16px;
+  }
+
+  .badge {
+    white-space: nowrap;
   }
 }

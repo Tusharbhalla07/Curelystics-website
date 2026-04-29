@@ -18,7 +18,7 @@ export default function About(){
         <div className="about-hero-inner">
           <div className="about-hero-copy">
             <h1>About Us</h1>
-            <h2>Building better out patient care experiences</h2>
+            <h2>Building the infrastructure for smarter OPD operations</h2>
             <p>Curelystics is an OPD-healthcare platform built to bring visibility, structure, and efficiency into outpatient care.</p>
             <p>From live queue tracking to smart token systems, we are creating a better experience for both patients and healthcare providers.</p>
           </div>
@@ -34,8 +34,7 @@ export default function About(){
             <img className="story-main" src={storyMainImage} alt="Doctor on phone" />
           </div>
           <div className="about-story-copy">
-            <h3>Our Story</h3>
-            <p>Curelystics didn’t begin in a boardroom.</p>
+            <h3>Our Story</h3>            <p className="story-highlight"><strong>The problem wasn't just waiting time. It was lack of visibility.</strong></p>            <p>Curelystics didn’t begin in a boardroom.</p>
             <p>It began with a simple observation. During visits to hospitals across India, especially in Tier 2 and Tier 3 cities, we kept seeing the same thing. Long queues. Crowded waiting areas. Patients sitting for hours, unsure of when they would be attended to.</p>
             <p>Behind the scenes, hospital staff were also struggling. Managing patient flow manually, answering repeated questions about queue status, and handling unstructured OPD systems made daily operations overwhelming. What stood out the most was this: The OPD, one of the busiest parts of any hospital, was still largely undigitized. So we asked a simple question:</p>
             <p>What if patients could see their wait time and plan their visit instead of waiting endlessly? That question led to the birth of Curelystics.</p>

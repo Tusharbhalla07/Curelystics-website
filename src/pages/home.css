@@ -328,7 +328,8 @@
   .hero {
     min-height: auto;
     padding: 24px 0 14px;
-    margin-top: 0
+    margin-top: 0;
+    overflow: hidden;
   }
 
   .hero-inner {
@@ -342,8 +343,17 @@
     padding: 26px 22px 0
   }
 
+  .hero-card::before {
+    bottom: -42px;
+    height: 190px;
+    filter: blur(22px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 14%, rgba(255, 255, 255, 0.66) 52%, rgba(255, 255, 255, 0.98) 100%);
+  }
+
   .hero-card::after {
-    height: 76px
+    bottom: -10px;
+    height: 110px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 64%, rgba(255, 255, 255, 0.38) 84%, rgba(255, 255, 255, 0.98) 100%);
   }
 
   .hero-content {
@@ -356,6 +366,10 @@
     font-size: clamp(32px, 6.8vw, 44px);
     margin-bottom: 14px;
     letter-spacing: -0.7px
+  }
+
+  .hero-title .hero-line-fixed {
+    white-space: normal;
   }
 
   .hero-sub {
@@ -380,6 +394,33 @@
     max-width: 440px;
     transform: translateY(2%);
     object-position: center;
+    border: 0;
+  }
+
+  /* Mobile-only seam fix: create a section-level soft fade into next block */
+  .hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    height: 80px;
+    pointer-events: none;
+    z-index: 4;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
+    filter: blur(10px);
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    height: 86px;
+    pointer-events: none;
+    z-index: 5;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 1) 100%);
   }
 }
 
@@ -1011,6 +1052,28 @@
     padding: 18px 14px 0;
   }
 
+  .hero-card::before {
+    bottom: -30px;
+    height: 160px;
+    filter: blur(18px);
+  }
+
+  .hero-card::after {
+    bottom: -6px;
+    height: 92px;
+  }
+
+  .hero::before {
+    bottom: 4px;
+    height: 72px;
+    filter: blur(9px);
+  }
+
+  .hero::after {
+    bottom: -14px;
+    height: 78px;
+  }
+
   .hero-title .hero-line-fixed {
     white-space: normal;
   }
@@ -1019,6 +1082,12 @@
     width: 100%;
     justify-content: center;
     max-width: 320px;
+  }
+}
+
+@media (max-width: 960px) {
+  .partner-strip {
+    margin-top: -2px;
   }
 }
 
@@ -1096,7 +1165,7 @@
     border-bottom: 1px solid #f1f5f9
   }
 
-  .pd-table tbody td {
+.pd-table tbody td {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1153,6 +1222,82 @@
 
   .pd-table tbody td span.pd-badge {
     margin-left: 8px
+  }
+}
+
+/* Final mobile overrides to prevent crowded desktop shrink on phones */
+@media (max-width: 768px) {
+  .hero-sub br,
+  .fs-sub br,
+  .pf-sub br {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.18;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    max-width: 100%;
+    line-height: 1.65;
+  }
+
+  .fs-row,
+  .fs-row.reverse {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    min-height: auto !important;
+  }
+
+  .fs-row .fs-media,
+  .fs-row.reverse .fs-media {
+    order: -1;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .fs-row .fs-content,
+  .fs-row.reverse .fs-content {
+    margin: 0 auto;
+    padding: 0 2px;
+    text-align: left;
+  }
+
+  .fs-content h3 {
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.2;
+  }
+
+  .fs-content p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .fs-media img,
+  .ir-media img,
+  .pf-right img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .contact-card,
+  .pf-card {
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: clamp(28px, 8.5vw, 34px);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    max-width: 100%;
   }
 }
 

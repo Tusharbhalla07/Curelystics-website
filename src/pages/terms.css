@@ -238,7 +238,7 @@
 
 @media (max-width: 768px) {
   .terms-page {
-    padding: 60px 20px;
+    padding: 90px var(--page-side) 48px;
   }
 
   .services-grid {
@@ -247,5 +247,10 @@
 
   .action-buttons {
     flex-direction: column;
+  }
+
+  .btn-accept,
+  .btn-close {
+    width: 100%;
   }
 }

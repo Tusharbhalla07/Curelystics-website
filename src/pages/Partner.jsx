@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { NavLink } from 'react-router-dom'
 import './partner.css'
 import './home.css'
 import heroRoundImage from '../assets/dc.png'
@@ -80,8 +79,9 @@ export default function Partner(){
         <div className="partner-top">
           <div className="partner-top-copy">
             <h1>
-              <span className="partner-h1-line">Reduce OPD Waiting Time and</span>
-              <span className="partner-h1-line">Improve Patient Flow Without Increasing Staff</span>
+              <span className="partner-h1-line">Reduce OPD Waiting Time</span>
+              <span className="partner-h1-line">and Improve Patient Flow</span>
+              <span className="partner-h1-line">Without Increasing Staff</span>
             </h1>
             <p className="partner-intro">
               <span className="partner-intro-line">A complete digital solution designed to streamline</span>
@@ -90,7 +90,7 @@ export default function Partner(){
             <button disabled className="partner-top-cta">Join with us now <span aria-hidden="true">&#8594;</span></button>
           </div>
           <div className="partner-top-media">
-            <img src={heroRoundImage} alt="Hospital staff collaborating" />
+            <img className="partner-hero-image" src={heroRoundImage} alt="Hospital staff collaborating" />
           </div>
         </div>
 
@@ -133,7 +133,7 @@ export default function Partner(){
             hospital ?
           </h4>
           <p>Join the digital revolution, streamline your OPD, empower your staff, and deliver a seamless patient experience.</p>
-          <NavLink to="/plans" className="partner-bottom-cta">Join with us now <span aria-hidden="true">&#8594;</span></NavLink>
+          <button type="button" className="partner-bottom-cta" disabled>Join with us now <span aria-hidden="true">&#8594;</span></button>
         </div>
       </div>
     </motion.section>

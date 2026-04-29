@@ -229,6 +229,15 @@
 	margin-bottom:30px;
 }
 
+.about-story-copy p.story-highlight {
+	font-size: 18px;
+	font-weight: 700;
+	color: #0f2945;
+	margin-bottom: 24px;
+	line-height: 1.6;
+	padding: 12px 0;
+}
+
 .about-mission-card {
   padding: clamp(32px, 5vw, 64px) clamp(24px, 4vw, 56px);
   min-height: auto;
@@ -401,5 +410,16 @@
 
   .about-mission-card h3 {
     font-size: 32px;
+  }
+
+  .about-vision-copy br {
+    display: none;
+  }
+
+  .about-story-copy p,
+  .about-vision-copy p,
+  .about-mission-card p {
+    font-size: 15px;
+    line-height: 1.7;
   }
 }

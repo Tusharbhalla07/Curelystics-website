@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import './features.css'
 import mainImage from '../assets/doc4.png'
 import kaImage from '../assets/ka.png'
@@ -16,17 +17,45 @@ import HospitalProblems from '../components/hospitalProblems';
 import CTASection from '../components/ctaSection';
 
 const solutionCards = [
-  { title: ['Smart Appointment', 'Booking'], image: smartBookingImage },
-  { title: ['Real-Time Token &', 'Queue System'], image: tokenQueueImage },
-  { title: 'Notification Systems', image: notificationImage },
-  { title: 'Multi-Panel System', image: panelImage },
-  { title: 'Family Member Booking', image: familyImage },
-  { title: 'Hospital Dashboard', image: dashboardImage },
-  { title: 'Multi Medical System Support', image: supportImage },
-  { title: 'Doctor Management System', image: doctorMgmtImage }
+  {
+    title: 'Real-Time Queue Visibility',
+    description: 'Patients can track their exact position in the queue, reducing uncertainty, crowding, and frustration inside hospital premises.',
+    image: tokenQueueImage
+  },
+  {
+    title: 'Smart Appointment Booking',
+    description: 'Enable structured appointment scheduling with optimized time slots to reduce overload and improve patient distribution.',
+    image: smartBookingImage
+  },
+  {
+    title: 'Doctor & OPD Management',
+    description: 'Manage doctor schedules, patient load, and consultation flow in one centralized system.',
+    image: doctorMgmtImage
+  },
+  {
+    title: 'OPD Analytics & Insights',
+    description: 'Get actionable insights on wait times, peak hours, and patient flow to improve operational decisions.',
+    image: dashboardImage
+  },
+  {
+    title: 'Automated Notifications',
+    description: 'Send real-time alerts to patients about their turn, delays, or updates via SMS or app notifications.',
+    image: notificationImage
+  },
+  {
+    title: 'Multi-Patient / Family Booking',
+    description: 'Allow patients to book and manage appointments for multiple family members in one place.',
+    image: familyImage
+  }
 ]
 
-export default function Features(){
+export default function Features() {
+  const navigate = useNavigate()
+
+  const handleGetStarted = () => {
+    navigate('/contact')
+  }
+
   return (
     <motion.section
       className="features-page"
@@ -47,7 +76,7 @@ export default function Features(){
             streamline outpatient operations and enhance patient<br />
             experience.
           </p>
-          <button type="button">Get Started</button>
+          <button type="button" onClick={handleGetStarted}>Get Started</button>
         </div>
 
         <div className="features-hero-media" aria-label="Healthcare team visual">
@@ -57,25 +86,17 @@ export default function Features(){
 
       <section className="features-problems">
         <h2 className="features-problems-heading" style={{ fontSize: '2.4rem', fontWeight: 800, lineHeight: 1.1, textAlign: 'center' }}>
-          <span style={{ display: 'block', marginBottom: '12px' }}>Comprehensive OPD</span>
-          <span style={{ display: 'block', marginBottom: '12px' }}>Solutions</span>
+          <span style={{ display: 'block', marginBottom: '12px' }}>Everything You Need to Run</span>
+          <span style={{ display: 'block', marginBottom: '12px' }}>a Smarter OPD</span>
         </h2>
         <div className="features-grid">
           {solutionCards.map((card) => {
             const titleText = Array.isArray(card.title) ? card.title.join(' ') : card.title
             return (
               <article className="features-card" key={titleText}>
-                <h3>
-                  {Array.isArray(card.title)
-                    ? card.title.map((line, idx) => (
-                        <React.Fragment key={idx}>
-                          {line}
-                          {idx < card.title.length - 1 && <br />}
-                        </React.Fragment>
-                      ))
-                    : card.title}
-                </h3>
+                <h3>{card.title}</h3>
                 <img src={card.image} alt={titleText} />
+                <p>{card.description}</p>
               </article>
             )
           })}
